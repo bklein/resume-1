@@ -1,0 +1,204 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://hirebenklein.com/}{\Large Ben Klein}} & Email : \href{mailto:ben@b4ri.org}{ben@b4ri.org}\\
+  \href{http://hirebenklein.com/}{http://www.hirebenklein.com} & Mobile : \href{tel:+8133683982}{813-368-3982} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Computer Science;  GPA: 4.00}{Jan. 2019 -- May. 2023}
+    \resumeSubheading
+      {University of Florida}{Gainesville, FL}
+      {Bachelor of Arts in Linguistics, Russian (Dual), Magna Cum Laude;  GPA: 3.92}{Aug. 2005 -- July 2009}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {iRobot}{Bedford, MA}
+      {Principal Software Engineer}{June 2023 - Present}
+      \resumeSubSubheading
+       {Senior Software Engineer}{Sep. 2020 - June 2023}
+      \resumeItemListStart
+        \resumeItem{2-in-1 Combo Cleaning}
+          {Adapted single-cleaning-mode strategy software to support multiple modes, in support of vac/mop robot release.}
+        \resumeItem{Defect Improvement}
+          {Provide root-cause analysis of defects}
+      \resumeItemListEnd
+
+   \resumeSubheading
+      {Paracosm}{Gainesville, FL}
+      {Senior Software Engineer}{Dec. 2013 - Sep. 2020 (Acquired by Occipital May 2017)}
+      \resumeItemListStart
+				\item Integrated Computer Vision and 3D SLAM modules to create application backend and live operator preview for indoor/outdoor mobile scanning, utilizing C++17, ROS and Linux
+				\item Designed and implemented HAL layer for data collection of Lidar, IMU and camera readings, utilizing Linux and proprietary C++ APIs
+				\item Designed and implemented containerized release strategy for PX-80 software utilizing Docker
+				\item Implemented visual bag-of-word place recognition for loop closure from academic literature
+				\item Implemented algorithm visualizations for calibration and odometry, utilizing OpenGL 3.3
+				\item Designed and implemented sensor data collection application with live operator preview for Kinnect-style depth camera, utilizing C++, Qt, OpenGL and Windows SensorAPI
+				\item Debugged and resolved numerous application crashes, including SIMD memory alignment errors utilizing GDB, Valgrind and other static analysis tools
+      \resumeItemListEnd
+
+  \resumeSubheading
+    {Shadow Health}{Gainesville, FL}
+    {Software Engineer}{Oct. 2012 - Nov. 2013}
+    \resumeItemListStart
+      \item Developed and maintained Ruby on Rails web application (Learning Management System with Unity plugin integrations for online medical training)
+      \item Designed and implemented service application for versioning and reuse of course rubrics
+      \item Designed and implemented serialization library to assist release of new course materials from sandbox environment
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Info Tech}{Gainesville, FL}
+    {Customer Support Specalist, Programmer}{May 2011 - Oct. 2012}
+    %\resumeItemListStart
+    %  \item Assisted clients on-site and remote technical support and integrations, validated weekly software releases
+    %\resumeItemListEnd
+  %\resumeSubheading
+  %  {O2B Kids}{Gainesville, FL}
+  %  {Preschool Teacher}{2010 - 2011}
+  %  \resumeItemListStart
+  %    \item
+  %      Supervised and instructed up to 30 students, aged 1-4 years.
+  %    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Nvidia GPU Technology Conference (GTC)}{San Jose, CA}
+      {}{2015}
+      Showcased 3D localization within mapped area (acquired with Kinnect-type 3D cameras) using bag-of-words
+      image recognition and 3D-3D transformation estimation. Users were able to drive an RC car in an arena and
+      see updated location information via standalone tablet app.
+    \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item
+      \textbf{Languages}{: C++, Rust, Python}
+    \item
+      \textbf{Technologies}{: Linux, Git, GDB, CMake, Ceres, Eigen, OpenGL, OpenCV, PCL, ROS, Qt, Boost, Lidar, IMU, Computer Vision, SLAM, Valgrind, Docker}
+  \resumeSubHeadingListEnd
+
+
+%--------ATTENDED CONFERENCES----------
+\section{Attended Conferences}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Robotics: Science and Systems (RSS)}{Pittsburgh, PA}{}{2018}
+    \resumeSubheading
+      {Computer Vision and Pattern Recognition (CVPR)}{Boston, MA}{}{2015}
+    \resumeSubheading
+      {Neural Information Processing Systems (NIPS)}{Montreal, Canada}{}{2014}
+    \resumeSubheading
+      {Computer Vision and Pattern Recognition (CVPR)}{Columbus, OH}{}{2014}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
