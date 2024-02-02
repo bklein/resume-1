@@ -93,8 +93,11 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://hirebenklein.com/}{\Large Ben Klein}} & Email : \href{mailto:ben@b4ri.org}{ben@b4ri.org}\\
-  \href{http://hirebenklein.com/}{http://www.hirebenklein.com} & Mobile : \href{tel:+8133683982}{813-368-3982} \\
+  % \textbf{\href{http://hirebenklein.com/}{\Large Ben Klein}} & Email : \href{mailto:ben@b4ri.org}{ben@b4ri.org}\\
+  % \href{http://hirebenklein.com/}{http://www.hirebenklein.com} & Mobile : \href{tel:+8133683982}{813-368-3982} \\
+
+  \textbf{{\Large Ben Klein}} & Email : \href{mailto:benjaminklein86@gmail.com}{benjaminklein86@gmail.com}\\
+                                                               & Mobile : \href{tel:+8133683982}{813-368-3982} \\
 \end{tabular*}
 
 
@@ -109,51 +112,139 @@
       {Bachelor of Arts in Linguistics, Russian (Dual), Magna Cum Laude;  GPA: 3.92}{Aug. 2005 -- July 2009}
   \resumeSubHeadingListEnd
 
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item
+      \textbf{Languages}{: C++ (17 and newer), Rust, Python}
+    \item
+      \textbf{Technologies}{: Linux, Git, GDB, CMake, Boost, Qt, Ceres, Eigen, OpenGL, OpenCV, PCL, ROS, Lidar, IMU, Computer Vision, SLAM, Valgrind, Docker}
+  \resumeSubHeadingListEnd
+
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+  \iffalse
+    *Map path Health
+    *Triangulating target picker
+    *2-1 combo strategy
+    Mission param builder
+    Unit testing workshop
+    Path planning regression framework
+    Hierchial Path Planner
+    Replace singletons with lifetime objects
+    Brought coverage planner into production (in a way to gradually replace existing method)
+    Applying current best practices to legacy code to make it easier to test and easier to modify functionality
+      * strong types (validated data)
+      * loose coupling
+      * appropiate result types (optional, expected)
+      * define clear object ownerships and lifetimes
+    Mentoring
+
+    What did I learn?
+      How to take existing code,
+      adapt, update and unit test it,
+      and share this with others.
+
+   improved static analysis in CICD
+
+  \fi
 
     \resumeSubheading
       {iRobot}{Bedford, MA}
-      {Principal Software Engineer}{June 2023 - Present}
+      {Principal Software Engineer}{Feb. 2023 - Present}
       \resumeSubSubheading
-       {Senior Software Engineer}{Sep. 2020 - June 2023}
+       {Senior Software Engineer}{Sep. 2020 - Feb. 2023}
       \resumeItemListStart
         \resumeItem{2-in-1 Combo Cleaning}
-          {Adapted single-cleaning-mode strategy software to support multiple modes, in support of vac/mop robot release.}
-        \resumeItem{Defect Improvement}
-          {Provide root-cause analysis of defects}
+          {Adapted single-cleaning-mode strategy software to support multiple modes, in support of vac+mop combo robot release.}
+        \resumeItem{Crash Guard}
+          {Analyzed core dumps with GDB to implement crash fixes and provide crash triage for adjacent teams}
+        \resumeItem{Strong Types}
+          {Prevented defects through use of strong types for validated or
+          processed data. Promoted and provided education on use of modern
+          result types, for consistent error handling.}
+        \resumeItem{Testing Workshops}
+          {Organized and led live-coding workshops to share techniques for
+          testing legacy code and to encourage good test practices.}
+        \resumeItem{Navigation}
+          {Numerous improvements to navigation, including hierarchical path
+          planning, navigability scoring for maps, uniform target sampling over
+          triangulated geometries, and creation of regression testing
+          framework.}
+        \resumeItem{Static Analysis}
+          {Took initiative to itemize and correct issues detected by static
+          analysis (clang-tidy) and coordinated with DevOps to integrate into
+          PR gates.}
+        \resumeItem{Mission Preferences}
+          {Developed validated user settings builder, to eliminate defects in
+          an area which had previously seen a high defect rate.}
+        \resumeItem{Legacy Maintenance}
+          {Adapted legacy code with low test coverage for new uses, through
+          correction of object lifetimes and ownerships, dependency decoupling,
+          and strong typing. This allowed unit tests to be written in
+          conjunction with new feature implementations and long-standing bug
+          fixes.}
       \resumeItemListEnd
 
    \resumeSubheading
       {Paracosm}{Gainesville, FL}
       {Senior Software Engineer}{Dec. 2013 - Sep. 2020 (Acquired by Occipital May 2017)}
       \resumeItemListStart
-				\item Integrated Computer Vision and 3D SLAM modules to create application backend and live operator preview for indoor/outdoor mobile scanning, utilizing C++17, ROS and Linux
-				\item Designed and implemented HAL layer for data collection of Lidar, IMU and camera readings, utilizing Linux and proprietary C++ APIs
-				\item Designed and implemented containerized release strategy for PX-80 software utilizing Docker
-				\item Implemented visual bag-of-word place recognition for loop closure from academic literature
-				\item Implemented algorithm visualizations for calibration and odometry, utilizing OpenGL 3.3
-				\item Designed and implemented sensor data collection application with live operator preview for Kinnect-style depth camera, utilizing C++, Qt, OpenGL and Windows SensorAPI
-				\item Debugged and resolved numerous application crashes, including SIMD memory alignment errors utilizing GDB, Valgrind and other static analysis tools
+        \resumeItem{PX-80}
+          {Handheld 3D scanner and compute device. Performed SLAM and 3D
+          reconstructions on device, controlled via a local web interface.}
+        \resumeItem{Data Collection}
+          {Designed and implemented HAL layer for data collection of Lidar, IMU
+          and greyscale/BGR/depth camera readings}
+        \resumeItem{Algorithm Visualizations}
+          {Implemented visualizations for various internal algorithms,
+          including calibration, odometry, and user scanning feedback,
+          utilizing OpenGL}
+        \resumeItem{BoW Place Recognition}
+          {Implemented visual bag-of-word place recognition for loop closure
+          from academic literature.}
+        \resumeItem{Containerized Releases}
+          {Improved build process (CMake) and containerized (Docker) release
+          strategy for PX-80 software, reducing deploy time from hours to
+          minutes.}
+        \resumeItem{Point Cloud Processing}
+          {Rearchitected point cloud post-processing pipeline to utilize
+          multiple cores and scale to arbitrary data sizes with limited system
+          memory, while maintaining vectorized workflows. Also improved
+          correctness of statistical point smoothing and filtering operations.
+          Prototyped 3D Hough Sphere algorithm for detection of planar surfaces
+          in point clouds.}
+
+				%\item Integrated Computer Vision and 3D SLAM modules to create application backend and live operator preview for indoor/outdoor mobile scanning, utilizing C++17, ROS and Linux
+        %\item Designed and implemented HAL layer for data collection of Lidar, IMU and camera readings, utilizing Linux and proprietary C++ APIs
+				%\item Designed and implemented containerized release strategy for PX-80 software utilizing Docker
+				%\item Implemented algorithm visualizations for calibration and odometry, utilizing OpenGL 3.3
+				%\item Designed and implemented sensor data collection application with live operator preview for Kinnect-style depth camera, utilizing C++, Qt, OpenGL and Windows SensorAPI
+				%\item Debugged and resolved numerous application crashes, including SIMD memory alignment errors utilizing GDB, Valgrind and other static analysis tools
       \resumeItemListEnd
+
+  % XXX
+  \pagebreak
 
   \resumeSubheading
     {Shadow Health}{Gainesville, FL}
     {Software Engineer}{Oct. 2012 - Nov. 2013}
     \resumeItemListStart
-      \item Developed and maintained Ruby on Rails web application (Learning Management System with Unity plugin integrations for online medical training)
-      \item Designed and implemented service application for versioning and reuse of course rubrics
-      \item Designed and implemented serialization library to assist release of new course materials from sandbox environment
+      \item Developed and maintained Ruby on Rails web application (Learning Management System with Unity plugin integrations for online medical training).
+      \item Designed and implemented service application for versioning and reuse of course rubrics.
+      \item Designed and implemented serialization library to assist release of new course materials from sandbox environment.
     \resumeItemListEnd
 
   \resumeSubheading
     {Info Tech}{Gainesville, FL}
-    {Customer Support Specalist, Programmer}{May 2011 - Oct. 2012}
+    {Customer Support Specialist, Programmer}{May 2011 - Oct. 2012}
     %\resumeItemListStart
     %  \item Assisted clients on-site and remote technical support and integrations, validated weekly software releases
     %\resumeItemListEnd
+
   %\resumeSubheading
   %  {O2B Kids}{Gainesville, FL}
   %  {Preschool Teacher}{2010 - 2011}
@@ -175,16 +266,6 @@
       image recognition and 3D-3D transformation estimation. Users were able to drive an RC car in an arena and
       see updated location information via standalone tablet app.
     \resumeSubHeadingListEnd
-
-%
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item
-      \textbf{Languages}{: C++, Rust, Python}
-    \item
-      \textbf{Technologies}{: Linux, Git, GDB, CMake, Ceres, Eigen, OpenGL, OpenCV, PCL, ROS, Qt, Boost, Lidar, IMU, Computer Vision, SLAM, Valgrind, Docker}
-  \resumeSubHeadingListEnd
 
 
 %--------ATTENDED CONFERENCES----------
