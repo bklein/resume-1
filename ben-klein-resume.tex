@@ -159,13 +159,14 @@
        {Senior Software Engineer}{Sep. 2020 - Feb. 2023}
       \resumeItemListStart
         \resumeItem{2-in-1 Combo Cleaning}
-          {Adapted single-cleaning-mode strategy software to support multiple modes, in support of vac+mop combo robot release.}
+          {Adapted single-cleaning-mode strategy software to support multiple modes, in support of vac+mop combo robot release (Roomba j9+).}
         \resumeItem{Crash Guard}
-          {Analyzed core dumps with GDB to implement crash fixes and provide crash triage for adjacent teams}
-        \resumeItem{Strong Types}
-          {Prevented defects through use of strong types for validated or
-          processed data. Promoted and provided education on use of modern
-          result types, for consistent error handling.}
+          {Analyzed core dumps with GDB to implement crash fixes and provide crash triage for adjacent teams.}
+          \resumeItem{Strong Types}
+          {Prevented defects by use of strong types for validated or processed
+          data, and synchronization with SLAM state. Promoted and educated on
+          use of modern result types, for consistent error handling across
+          modules.}
         \resumeItem{Testing Workshops}
           {Organized and led live-coding workshops to share techniques for
           testing legacy code and to encourage good test practices.}
@@ -179,9 +180,9 @@
           analysis (clang-tidy) and coordinated with DevOps to integrate into
           PR gates.}
         \resumeItem{Mission Preferences}
-          {Developed validated user settings builder, to eliminate defects in
+          {Developed validated user settings builder, eliminating defects in
           an area which had previously seen a high defect rate.}
-        \resumeItem{Legacy Maintenance}
+        \resumeItem{Legacy Innovation}
           {Adapted legacy code with low test coverage for new uses, through
           correction of object lifetimes and ownerships, dependency decoupling,
           and strong typing. This allowed unit tests to be written in
@@ -198,11 +199,11 @@
           reconstructions on device, controlled via a local web interface.}
         \resumeItem{Data Collection}
           {Designed and implemented HAL layer for data collection of Lidar, IMU
-          and greyscale/BGR/depth camera readings}
+          and greyscale/BGR/depth camera readings.}
         \resumeItem{Algorithm Visualizations}
           {Implemented visualizations for various internal algorithms,
           including calibration, odometry, and user scanning feedback,
-          utilizing OpenGL}
+          utilizing OpenGL.}
         \resumeItem{BoW Place Recognition}
           {Implemented visual bag-of-word place recognition for loop closure
           from academic literature.}
@@ -260,11 +261,19 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Nvidia GPU Technology Conference (GTC)}{San Jose, CA}
+      {3D Localization and Visualization Demo}{San Jose, CA}
       {}{2015}
-      Showcased 3D localization within mapped area (acquired with Kinnect-type 3D cameras) using bag-of-words
-      image recognition and 3D-3D transformation estimation. Users were able to drive an RC car in an arena and
-      see updated location information via standalone tablet app.
+      Showcased 3D mapping and localization software developed by Paracosm. A
+      small arena space was mapped using RGBD and inertial data. Then an RC car
+      was fitted with an RGBD camera and localized itself using bag-of-words
+      image recognition and 3D-3D transformation estimation. The 3D pose was
+      transmitted to a tablet running an Unreal Engine visualization of the
+      mapped space, showing the car's location as it moved around the arena.
+      Presented at Nvidia GTC.
+
+      % Showcased 3D localization within mapped area (acquired with RGBD cameras) using bag-of-words
+      % image recognition and 3D-3D transformation estimation. Users were able to drive an RC car in an arena and
+      % see updated location information via standalone tablet app.
     \resumeSubHeadingListEnd
 
 
@@ -272,9 +281,13 @@
 \section{Attended Conferences}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {Robotics Summit \& Expo}{Boston, MA}{}{2023}
+    \resumeSubheading
       {Robotics: Science and Systems (RSS)}{Pittsburgh, PA}{}{2018}
     \resumeSubheading
       {Computer Vision and Pattern Recognition (CVPR)}{Boston, MA}{}{2015}
+    \resumeSubheading
+      {Nvidia GPU Technology Conference (GTC)}{San Jose, CA}{}{2015}
     \resumeSubheading
       {Neural Information Processing Systems (NIPS)}{Montreal, Canada}{}{2014}
     \resumeSubheading
